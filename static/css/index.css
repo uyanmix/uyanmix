@@ -70,7 +70,7 @@ strong{
     position: relative;
     margin-top: -2rem;
     width: 100%;
-    background-color: #49b1f5;
+    background-color: #78a481;
     background-attachment: local;
     background-position: center;
     background-size: cover;
@@ -330,7 +330,7 @@ aside_content .card-info .author-info__description {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 85%
+    background: linear-gradient(to right, #b6d4b9 0%, #b6d4b9 100%); width: 85%
 }
 
 ::-webkit-scrollbar-track {
