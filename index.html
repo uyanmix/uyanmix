@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
     <title>彧言的作品集</title>
-    <meta name="description" content="后端开发者，略懂前端, 缺乏社会的毒打">
+    <meta name="description" content="混音师，后端开发者，略懂前端和AI，缺乏社会的毒打">
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="favicon.ico">
@@ -21,7 +21,7 @@
 
 <body>
     <div id="body-wrap">
-        <nav class="not_index_bg" id="nav" style="background-image:url(https://api.ixiaowai.cn/api/api.php)">
+        <nav class="not_index_bg" id="nav" style="background-image:url(./static/img/bg.png)">
             <div id="page_site-info">
                 <div id="site-title">
                     <span class="blogtitle"></span>
@@ -46,10 +46,10 @@
                         <div class="card-content">
                             <div class="card-info-avatar is-center">
                                 <img class="avatar-img"
-                                    src="https://cdn.jsdelivr.net/gh/laoxuai/assert/images/20200125221102.png"
+                                    src="static/img/avatar.gif"
                                     alt="avatar">
                                 <div class="author-info__name">彧言</div>
-                                <div class="author-info__description">后端开发者，略懂前端，缺乏社会的毒打</div>
+                                <div class="author-info__description">混音师，后端开发者，略懂前端和AI，缺乏社会的毒打</div>
                             </div>
                             <div class="card-info-social-icons is-center">
                                 <a class="social-icon" href="https://space.bilibili.com/46669325" target="_blank">
@@ -61,9 +61,12 @@
                 </div>
                 <article id="page">
                     <div class="article-container">
-                        <h2>音乐</h2>
+                        <h2>贴唱</h2>
+                        <div id="player_tie" style="width: 80%; margin: auto auto;"></div>
 
-                        <div id="player" style="width: 80%; margin: auto auto;"></div>
+                        <h2>分轨</h2>
+                        <div id="player_fen" style="width: 80%; margin: auto auto;"></div>
+
                     </div>
                 </article>
             </div>
@@ -88,14 +91,50 @@
         console.clear();
         console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
 
-        const ap = new APlayer({
-            container: document.getElementById('player'),
-            audio: [{
-                name: 'test',
-                artist: 'test',
-                url: 'https://uyanmix.github.io/static/audio/炎.mp3',
-                cover: 'cover.jpg'
-            }]
+        let baseUrl = 'https://uyanmix.github.io/static/audio/'
+        let coverImg = 'static/img/avatar.gif'
+        const ap1 = new APlayer({
+            container: document.getElementById('player_tie'),
+            audio: [
+                {
+                    name: '珊瑚海',
+                    artist: '',
+                    url: baseUrl+'珊瑚海.mp3',
+                    cover: coverImg
+                },
+                {
+                    name: '炎',
+                    artist: '',
+                    url: baseUrl+'炎.mp3',
+                    cover: coverImg
+                },
+                {
+                    name: '坏女孩',
+                    artist: '',
+                    url:'/static/audio/坏女孩.aac',
+                    cover: coverImg
+                }
+            ]
+        });
+
+
+
+        const ap2 = new APlayer({
+            container: document.getElementById('player_fen'),
+            audio: [
+                {
+                    name: '珊瑚海',
+                    artist: '',
+                    url: baseUrl+'珊瑚海.mp3',
+                    cover: coverImg
+                },
+                {
+                    name: '火',
+                    artist: '',
+                    url: baseUrl+'炎.mp3',
+                    cover: coverImg
+                }
+            ]
         });
 
         // 浏览器搞笑标题
