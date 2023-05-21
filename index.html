@@ -92,28 +92,47 @@
         console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
 
         let baseUrl = 'https://uyanmix.github.io/static/audio/'
+        let fileFormat = '.aac'
         let coverImg = 'static/img/avatar.gif'
         const ap1 = new APlayer({
             container: document.getElementById('player_tie'),
             audio: [
                 {
                     name: '珊瑚海',
-                    artist: '',
-                    url: baseUrl+'珊瑚海.mp3',
+                    artist: '自然人歌手',
+                    url: baseUrl+'u73cau745au6d77'+fileFormat,
                     cover: coverImg
                 },
                 {
                     name: '炎',
-                    artist: '',
-                    url: baseUrl+'炎.mp3',
+                    artist: '自然人歌手',
+                    url: baseUrl+'u708e'+fileFormat,
                     cover: coverImg
                 },
                 {
                     name: '坏女孩',
-                    artist: '',
-                    url:'/static/audio/坏女孩.aac',
+                    artist: 'AI虚拟歌手',
+                    url: baseUrl+'u574fu5973u5b69'+fileFormat,
                     cover: coverImg
-                }
+                },
+                {
+                    name: '竹林间',
+                    artist: '传统虚拟歌手',
+                    url: baseUrl+'u7af9u6797u95f4'+fileFormat,
+                    cover: coverImg
+                },
+                {
+                    name: '你不在',
+                    artist: '自然人歌手',
+                    url: baseUrl+'u4f60u4e0du5728'+fileFormat,
+                    cover: coverImg
+                },
+                {
+                    name: '太阳',
+                    artist: '自然人歌手',
+                    url: baseUrl+'u592au9633'+fileFormat,
+                    cover: coverImg
+                },
             ]
         });
 
