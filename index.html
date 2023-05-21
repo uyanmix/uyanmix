@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
-    <title>彧言的作品集</title>
+    <title>彧言的混音作品集</title>
     <meta name="description" content="混音师，后端开发者，略懂前端和AI，缺乏社会的毒打">
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
@@ -64,7 +64,9 @@
                         <h2>贴唱</h2>
                         <div id="player_tie" style="width: 80%; margin: auto auto;"></div>
 
+
                         <h2>分轨</h2>
+                        <p style="text-align: center">本播放列表歌曲均经过剪辑拼接，原版请至各大平台收听</p>
                         <div id="player_fen" style="width: 80%; margin: auto auto;"></div>
 
                     </div>
@@ -78,19 +80,14 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <!-- aplayer、meting -->
-    <!-- require APlayer -->
+    <!--  APlayer -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-    <!-- require MetingJS -->
-    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
 
 
 
     <script type="text/javascript">
-        console.clear();
-        console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
-
         let baseUrl = 'https://mix.uyan.top/static/audio/'
         let fileFormat = '.aac'
         let coverImg = 'static/img/avatar.gif'
@@ -143,21 +140,48 @@
             audio: [
                 {
                     name: '春山煮忆MMA',
-                    artist: '自然人歌手',
+                    artist: '纯音乐',
                     url: baseUrl+'u6625u5c71u716eu5fc6'+fileFormat,
                     cover: coverImg
                 },
                 {
                     name: '星光阿尼亚MMA',
-                    artist: '自然人歌手',
+                    artist: '纯音乐',
                     url: baseUrl+'u661fu5149u963fu5c3cu4e9a'+fileFormat,
+                    cover: coverImg
+                },
+                {
+                    name: '星光阿尼亚CN',
+                    artist: 'Akie秋绘',
+                    url: baseUrl+'u661fu5149u963fu5c3cu4e9au43u4e'+fileFormat,
+                    cover: coverImg
+                },
+                {
+                    name: '星光阿尼亚JP',
+                    artist: '小春六花(虚拟歌手)',
+                    url: baseUrl+'u661fu5149u963fu5c3cu4e9au4au50'+fileFormat,
+                    cover: coverImg
+                },
+                {
+                    name: '唐宋除岁写照MMA',
+                    artist: '纯音乐',
+                    url: baseUrl+'u5510u5b8bu9664u5c81u5199u7167'+fileFormat,
+                    cover: coverImg
+                },
+                {
+                    name: '烛九阴记闻MMA',
+                    artist: '纯音乐',
+                    url: baseUrl+'u70dbu4e5du9634u8bb0u95fb'+fileFormat,
                     cover: coverImg
                 },
 
             ]
         });
 
-        // 浏览器搞笑标题
+        console.clear();
+        console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
+
+        // 浏览器动态标题
         var OriginTitle = document.title;
         var titleTime;
         document.addEventListener('visibilitychange', function () {
